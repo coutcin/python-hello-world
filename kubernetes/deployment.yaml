@@ -1,23 +1,23 @@
 apiVersion: "apps/v1"
 kind: "Deployment"
 metadata:
-  name: "hello"
+  name: "hello-2"
   namespace: "default"
   labels:
-    app: "hello"
+    app: "hello-2"
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: "hello"
+      app: "hello-2"
   template:
     metadata:
       labels:
-        app: "hello"
+        app: "hello-2"
     spec:
       containers:
       - name: hello
-        image: gcr.io/presales-sandbox-346209/hell:v1
+        image: gcr.io/presales-sandbox-346209/hell:v2
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
